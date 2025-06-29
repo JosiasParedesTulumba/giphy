@@ -1,0 +1,10 @@
+<div class="sidebar">
+  <h3>Categorías</h3>
+  <ul>
+    <li *ngFor="let cat of categories">
+      <a (click)="selectCategory(cat)" [class.selected]="selected === cat.name" class="category-link">
+        {{ cat.name }}
+      </a>
+    </li>
+  </ul>
+</div>

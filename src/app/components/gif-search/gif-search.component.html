@@ -1,0 +1,14 @@
+<div class="gif-search-container">
+    <div class="search-bar">
+        <input [(ngModel)]="searchTerm" placeholder="Buscar GIFs..." (keyup.enter)="buscarGifs(searchTerm)">
+        <button (click)="buscarGifs(searchTerm)">Buscar</button>
+    </div>
+
+    <div *ngIf="loading" class="loading">Cargando...</div>
+
+    <div class="gif-grid">
+        <div *ngFor="let gif of gifs" class="gif-item">
+            <img [src]="gif.images.fixed_height.url" [alt]="gif.title">
+        </div>
+    </div>
+</div>

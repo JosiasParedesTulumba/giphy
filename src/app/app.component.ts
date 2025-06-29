@@ -8,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'mi-giphy';
+
+  currentCategory: string = '';
+
+  onCategorySelected(category: string) {
+    this.currentCategory = category;
+  }
 }
